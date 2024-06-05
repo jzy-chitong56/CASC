@@ -1,4 +1,4 @@
-﻿// Microsoft Visual C++ generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -226,7 +226,7 @@ CAPTION "合并列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CONTROL         "",IDC_SOURCE_LISTFILES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_TABSTOP,12,18,321,105,WS_EX_CLIENTEDGE
-    GROUPBOX        "源文件列表",IDC_SOURCE_GROUP,7,7,332,143
+    GROUPBOX        "源列表文件",IDC_SOURCE_GROUP,7,7,332,143
     PUSHBUTTON      "添加列表文件...",IDC_ADD,12,129,97,14
     PUSHBUTTON      "删除",IDC_REMOVE,124,129,97,14
     PUSHBUTTON      "删除所有",IDC_REMOVE_ALL,236,129,97,14
@@ -296,9 +296,9 @@ BEGIN
     EDITTEXT        IDC_EXTRACT_TO,7,22,234,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE,245,22,16,14
     GROUPBOX        "其他选项",-1,7,40,254,79
-    CONTROL         "清空提取目录现有文件",IDC_DELETE_EXISTING_FILES,
+    CONTROL         "清空提取目录",IDC_DELETE_EXISTING_FILES,
                     "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,52,242,8
-    CONTROL         "提取纯名称，忽略游戏目录结构",IDC_EXTRACT_PLAIN_NAME,
+    CONTROL         "提取纯名称，忽略储存目录结构",IDC_EXTRACT_PLAIN_NAME,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,65,242,8
     CONTROL         "跳过大小为0字节的文件",IDC_SKIP_ZERO_SIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,78,242,8
     CONTROL         "跳过密钥未知的加密文件",IDC_SKIP_ENCRYPTED,
@@ -310,7 +310,7 @@ BEGIN
                     "Button",BS_AUTORADIOBUTTON | WS_GROUP,14,136,242,8
     CONTROL         "继续提取并用0填补空白",IDC_FILL_GAPS_WITH_ZEROS,
                     "Button",BS_AUTORADIOBUTTON,14,149,242,8
-    CONTROL         "继继提取且不显示报错",IDC_SKIP_AND_CONTINUE_EXTRACTING,
+    CONTROL         "继续提取且不显示报错",IDC_SKIP_AND_CONTINUE_EXTRACTING,
                     "Button",BS_AUTORADIOBUTTON,14,162,242,8
     DEFPUSHBUTTON   "确定",IDOK,157,182,50,14,WS_GROUP
     PUSHBUTTON      "取消",IDCANCEL,211,182,50,14
@@ -349,7 +349,7 @@ END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 395, 220
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
-CAPTION "%s"""" 属性"
+CAPTION "%s"" 属性"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CTEXT           "载入中...",IDC_LOADING,7,7,381,187,SS_CENTERIMAGE | SS_SUNKEN
@@ -423,7 +423,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPT
 CAPTION "选择存储"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    LTEXT           "选择一个存储",IDC_TITLE,8,8,252,9
+    LTEXT           "选择存储",IDC_TITLE,8,8,252,9
     CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,19,313,105
     DEFPUSHBUTTON   "确定",IDOK,217,132,50,14,WS_GROUP
     PUSHBUTTON      "取消",IDCANCEL,271,132,50,14
@@ -434,7 +434,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPT
 CAPTION "属性查看器"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    GROUPBOX        "比例字体 (文本视图) ",IDC_STATIC,7,6,254,66
+    GROUPBOX        "自动比例 (文本视图) ",IDC_STATIC,7,6,254,66
     LTEXT           "",IDC_FONT_NAME1,14,17,188,14,SS_CENTERIMAGE
     LTEXT           "ABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyzěščřžýáíé",IDC_FONT1,12,36,244,30,SS_SUNKEN
     PUSHBUTTON      "修改...",IDC_SELECT_FONT1,205,17,50,14
@@ -448,10 +448,10 @@ END
 
 IDD_GOTO_OFFSET DIALOGEX 0, 0, 198, 67
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "设置补偿"
+CAPTION "设置偏移"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    LTEXT           "输入新文件补偿 (十进制或十六进制):",IDC_STATIC,7,7,183,12,SS_CENTERIMAGE
+    LTEXT           "输入新文件偏移 (十进制或十六进制):",IDC_STATIC,7,7,183,12,SS_CENTERIMAGE
     EDITTEXT        IDC_FILE_OFFSET,7,20,183,14,ES_AUTOHSCROLL
     DEFPUSHBUTTON   "确定",IDOK,87,46,50,14
     PUSHBUTTON      "取消",IDCANCEL,141,46,50,14
@@ -474,19 +474,19 @@ BEGIN
     GROUPBOX        "工作目录",-1,7,7,269,47
     EDITTEXT        IDC_WORKDIR,13,17,237,13,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_WORK,255,17,15,13
-    LTEXT           "该目录用于储存 Casc查看器 提取出来的文件.如果您输入了一个相对路径, 那么 'CascView.exe' 所在的目录将被作为根目录.",-1,13,33,258,16
+    LTEXT           "该目录用于储存 Casc查看器 提取的文件.如果您输入了一个相对路径, 那么 'CascView.exe' 所在的目录将被作为根目录.",-1,13,33,258,16
     GROUPBOX        "界面设置",-1,7,57,269,43
-    CONTROL         "以B,KB,和MB为单位显示文件尺寸",IDC_FSIZE_HUMAN_READABLE,
+    CONTROL         "以B,KB,和MB为单位显示文件大小",IDC_FSIZE_HUMAN_READABLE,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,70,251,10
     CONTROL         "工具栏显示小图标",IDC_SMALL_TOOLBAR_BUTTONS,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,84,251,10
     GROUPBOX        "提取设置",-1,7,106,269,43
-    CONTROL         "文件重复时自动覆盖，不再询问",IDC_AUTO_OVERWRITE,
+    CONTROL         "文件重名时自动覆盖，不再询问",IDC_AUTO_OVERWRITE,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,119,251,10
     CONTROL         "提取文件时显示选项对话框(s)",IDC_SHOW_EXTRACT_OPTIONS,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,132,251,10
-    GROUPBOX        "本地化储存",-1,7,153,269,51
-    LTEXT           "列表只显示区域设置相同的文件.\n仅适用于使用区域设置的存储，如魔兽世界.",-1,12,164,259,17
+    GROUPBOX        "本地化",-1,7,153,269,51
+    LTEXT           "列表只显示与储存区域相同的文件.\n仅适用于使用区域设置的存储，如魔兽世界.",-1,12,164,259,17
     PUSHBUTTON      "(默认区域)",IDC_LOCALE_LIST,12,184,259,13,BS_CENTER
 END
 
@@ -496,29 +496,29 @@ CAPTION "列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "魔兽世界(正式服)",IDC_WOW_RETAIL,7,7,269,61
-    LTEXT           "输入魔兽世界列表文件名 (CSV, 正式服或测试服)",IDC_LABEL_CSV,13,19,257,9
+    LTEXT           "输入魔兽世界列表文件名 (CSV格式, 正式服或测试服)",IDC_LABEL_CSV,13,19,257,9
     EDITTEXT        IDC_LISTFILE_CSV,12,31,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_CSV,256,30,15,14
-    CONTROL         "下载魔兽世界社区列表文件 (CSV, github.com/wowdev)",IDC_DOWNLOAD_CSV,
+    CONTROL         "下载魔兽世界社区列表文件 (CSV格式, github.com/wowdev)",IDC_DOWNLOAD_CSV,
                     "Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,12,49,259,13
-    GROUPBOX        "魔兽世界经典版",IDC_WOW_CLASSIC,7,76,269,61
-    LTEXT           "输入魔兽世界(经典版)列表文件名(TXT)",IDC_LABEL_TXT,13,89,257,9
+    GROUPBOX        "魔兽世界怀旧版",IDC_WOW_CLASSIC,7,76,269,61
+    LTEXT           "输入魔兽世界(怀旧版)列表文件名(TXT格式)",IDC_LABEL_TXT,13,89,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,100,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,257,100,15,14
-    CONTROL         "下载魔兽世界社区列表文件 (TXT, github.com/wowdev)",IDC_DOWNLOAD_TXT,
+    CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
                     "Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,12,119,259,13
 END
 
 IDD_GET_LISTFILE_TXT DIALOGEX 0, 0, 283, 92
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "魔兽世界(经典版)列表文件"
+CAPTION "魔兽世界(怀旧版)列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_CLASSIC,7,3,269,62
-    LTEXT           "输入魔兽世界(经典版)列表文件名(TXT)",IDC_LABEL_TXT,13,13,257,9
+    LTEXT           "输入魔兽世界(怀旧版)列表文件名(TXT格式)",IDC_LABEL_TXT,13,13,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,24,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,256,24,15,14
-    CONTROL         "下载魔兽世界社区列表文件 (TXT, github.com/wowdev)",IDC_DOWNLOAD_TXT,
+    CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
                     "Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,12,44,259,13
     DEFPUSHBUTTON   "确定",IDOK,171,71,50,14
     PUSHBUTTON      "取消",IDCANCEL,226,71,50,14
@@ -530,10 +530,10 @@ CAPTION "魔兽世界列表文件 (正式服或测试服)"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_RETAIL,7,3,269,62
-    LTEXT           "输入魔兽世界列表文件名 (CSV, 正式服或测试服)",IDC_LABEL_CSV,13,13,257,9
+    LTEXT           "输入魔兽世界列表文件名 (CSV格式, 正式服或测试服)",IDC_LABEL_CSV,13,13,257,9
     EDITTEXT        IDC_LISTFILE_CSV,12,24,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_CSV,256,24,15,14
-    CONTROL         "下载魔兽世界社区列表文件 (CSV, github.com/wowdev)",IDC_DOWNLOAD_CSV,
+    CONTROL         "下载魔兽世界社区列表文件 (CSV格式, github.com/wowdev)",IDC_DOWNLOAD_CSV,
                     "Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,12,44,259,13
     DEFPUSHBUTTON   "确定",IDOK,171,71,50,14
     PUSHBUTTON      "取消",IDCANCEL,226,71,50,14
@@ -554,7 +554,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     EDITTEXT        IDC_KEY_VALUE,58,90,235,14,ES_AUTOHSCROLL
     GROUPBOX        "覆盖加密部分",IDC_STATIC,7,113,291,43
-    LTEXT           "覆盖将跳过加密部分 (用零填充)",IDC_STATIC,12,124,281,11
+    LTEXT           "覆盖将跳过加密部分 (用0填充)",IDC_STATIC,12,124,281,11
     PUSHBUTTON      "覆盖",IDC_OVERCOME_ENCRYPTED,12,137,134,14
     PUSHBUTTON      "全部覆盖",IDC_OVERCOME_ENCRYPTED_ALL,158,137,134,14
     DEFPUSHBUTTON   "确定",IDOK,194,161,50,14
@@ -574,7 +574,7 @@ CAPTION "导出到元存储"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_RETAIL,7,3,269,110
-    LTEXT           "元存储可以包含多个游戏构建, 不同于自建版本或 .build.info 文件. 所有版本共用相同的文件，\n大量节省磁盘空间.",IDC_STATIC,13,13,257,26
+    LTEXT           "元存储可以包含多个游戏构建, 不同于自建版本或 .build 或 .info 文件. 元储存所有版本共用相同的文件，\n大量节省磁盘空间.",IDC_STATIC,13,13,257,26
     LTEXT           "目标文件夹:",IDC_STATIC,12,47,258,8
     EDITTEXT        IDC_TARGET_FOLDER,12,57,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_TARGET_FOLDER_BROWSE,256,57,15,14
@@ -894,7 +894,7 @@ BEGIN
         MENUITEM "列表",                       ID_VIEW_LIST
         MENUITEM "详细信息",                    ID_VIEW_DETAILS, CHECKED
         MENUITEM SEPARATOR
-        MENUITEM "将列恢复为默认",   ID_VIEW_RESET_COLUMNS
+        MENUITEM "恢复列表到默认视图",   ID_VIEW_RESET_COLUMNS
         MENUITEM SEPARATOR
         MENUITEM "导航菜单",                ID_VIEW_RIBBON_MENU
     END
@@ -973,9 +973,9 @@ BEGIN
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
         MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
     END
-    POPUP "列表头"
+    POPUP "表头"
     BEGIN
-        MENUITEM "将列恢复为默认",   ID_VIEW_RESET_COLUMNS
+        MENUITEM "恢复列表到默认视图",   ID_VIEW_RESET_COLUMNS
     END
 END
 
@@ -994,11 +994,11 @@ BEGIN
         MENUITEM "二进制\t3",             ID_VIEW_HEX
         MENUITEM "贴图\t4",                   ID_VIEW_IMAGE
         MENUITEM SEPARATOR
-        MENUITEM "上一张图\tPgUp",       ID_VIEW_PREV_IMAGE
-        MENUITEM "下一张图\tPgDn",           ID_VIEW_NEXT_IMAGE
+        MENUITEM "上张图\tPgUp",       ID_VIEW_PREV_IMAGE
+        MENUITEM "下张图\tPgDn",           ID_VIEW_NEXT_IMAGE
         MENUITEM SEPARATOR
-        MENUITEM "上一份文件\tBackspace",    ID_VIEW_PREV_FILE
-        MENUITEM "下一份文件\tSpace",            ID_VIEW_NEXT_FILE
+        MENUITEM "上个文件\tBackspace",    ID_VIEW_PREV_FILE
+        MENUITEM "下个文件\tSpace",            ID_VIEW_NEXT_FILE
         MENUITEM SEPARATOR
         MENUITEM "原始比例\tO",           ID_VIEW_ORIGINAL_SIZE
         MENUITEM SEPARATOR
@@ -1099,7 +1099,7 @@ BEGIN
     IDS_SIZE                "大小"
     IDS_GAME_NAME           "游戏"
     IDS_READY               "就绪"
-    IDS_FIRST_RUN           "首次运行 CascView.\n请检查配置."
+    IDS_FIRST_RUN           "首次运行 CascView.\n请确认设置."
     IDS_E_FILE_INCOMPLETE   "文件不完整"
     IDS_BROWSE_WORKING_DIRECTORY "选择工作目录"
     IDS_BROWSE_LISTFILE_DIRECTORY "选择列表文件目录"
@@ -1110,7 +1110,7 @@ BEGIN
     IDS_E_LISTFILE_INVALID  "%s 列表文件太长或太大，无法写入 (s)"
     IDS_NO_STORAGE_SELECTED "未选择储存.\n请重新选择."
     IDS_E_MISSING_TARGET_LISTFILE "缺少输入输出列表文件"
-    IDS_E_OPEN_STORAGE      "储存打开失败 ""%s""."
+    IDS_E_OPEN_STORAGE      "%s"" 储存打开失败."
 END
 
 STRINGTABLE
@@ -1123,20 +1123,20 @@ BEGIN
     IDS_NOTHING_TO_EXPORT   "无可导出内容. 请选择文件或文件哈希."
     IDS_YES                 "是"
     IDS_NO                  "否"
-    IDS_E_LOAD_PRODUCT_DB   "加载文件失败 ""%s"".\n无法确定已安装游戏列表."
+    IDS_E_LOAD_PRODUCT_DB   "%s"" 文件加载失败.\n无法确定已安装游戏列表."
     IDS_E_MISSING_INPUT_LISTFILES "未输入任何输入列表文件"
     IDS_INVALID_PARAMETER   "%s.\n是否显示命令行选项?"
     IDS_ENTER_KEY_VALUE     "<在此输入键值>"
     IDS_SPAN_COUNT          "跨度数"
     IDS_FILE_MASK_CUE       "输入文件名或通配符"
-    IDS_E_LOAD_FILE         "加载问价失败 ""%s""."
+    IDS_E_LOAD_FILE         "%s"" 文件加载失败."
     IDS_FILEDATAID          "文件数据ID"
 END
 
 STRINGTABLE
 BEGIN
     IDS_E_CONVERT_KEY_VALUE "转换键值出错. 格式无效或长度不合法."
-    IDS_E_READ_FILE         "读取文件失败."
+    IDS_E_READ_FILE         "文件读取失败."
     IDS_OPTIONS             "CascView 设置"
     IDS_SAVE_LISTFILE       "文件列表另存为"
     IDS_TEXT_COPIED_TO_CLIPBOARD "复制值到剪贴板"
