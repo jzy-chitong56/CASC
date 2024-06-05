@@ -1189,11 +1189,11 @@ BEGIN
                             "CSV 列表文件 (*.csv)|*.csv|所有文件 (*.*)|*.*||"
     IDS_FILTERS_LISTFILES_TXT 
                             "Text 列表文件 (*.txt)|*.txt|所有文件 (*.*)|*.*||"
-    IDS_IMAGE_BLP           "BLP: 魔兽系列的暴雪纹理"
+    IDS_IMAGE_BLP           "BLP: 暴雪魔兽系列纹理文件"
     IDS_IMAGE_PCX           "PCX: ZSoft PiCture eXchange image"
     IDS_IMAGE_TGA           "TGA: Truevision graphics adapter image"
     IDS_IMAGE_DDS           "DDS: Direct Draw Surface Image"
-    IDS_IMAGE_UNITY3D       "Unity3D Image"
+    IDS_IMAGE_UNITY3D       "Unity3D 图像"
 END
 
 STRINGTABLE
@@ -1201,7 +1201,7 @@ BEGIN
     IDS_ZERO_TAG_COMBINATION 
                             "将隐藏所选的标签组合结果."
     IDS_FOUND_FILES         "搜索完成. 共找到 %u 个文件(s)."
-    IDS_PROPERTIES_FOR      "%s"" 属性"""
+    IDS_PROPERTIES_FOR      "%s"" 属性"
     IDS_E_DOWNLOAD_LISTFILE "下载列表文件失败 (错误代码 %08X)"
     IDS_DOWNLOADING_LISTFILE "正在下载列表文件 ..."
     IDS_PRODUCT_NAME        "项目名称"
@@ -1214,14 +1214,14 @@ BEGIN
     IDS_E_OPEN_CANCELLED    "已取消打开储存."
     IDS_OPENING_STORAGE     "正在打本本地储存..."
     IDS_E_GET_PROPERTIES    "%s"" 属性加载失败"
-    IDS_LOADING_FILES       "咋横在加载储存的文件..."
+    IDS_LOADING_FILES       "正在加载储存文件..."
 END
 
 STRINGTABLE
 BEGIN
     IDS_NO_RECENT_ITEMS     "<最近未打开项目>"
     IDS_CHOOSE_LISTFILE     "选择列表文件"
-    IDS_E_NO_ITEMS_SELECTED "未选择任何项目.\n请重新选择项目(支持多选)."
+    IDS_E_NO_ITEMS_SELECTED "未选择任何项目.\n请重新选择(支持多选)."
     IDS_EXTRACTING_FILES    "正在提取储存的文件..."
     IDS_BROWSE_TARGET_DIRECTORY "选择要提取的目标目录"
     IDS_FILE_MASK           "文件名:"
@@ -1273,18 +1273,18 @@ BEGIN
     IDS_STOP_SEARCH         "停止搜索"
     IDS_E_BAD_HEXA_STRING   "无效的六进制字符串. 请遵循以下格式重新输入:\n""0A CC F8 15 33""."
     IDS_FILTERS_IMAGES      "BMP文件 (*.bmp)|*.bmp|PNG文件 (*.png)|*.png||"
-    IDS_IMAGE_SAVED         "%s 位图文件保存成功."
+    IDS_IMAGE_SAVED         "%s 保存成功."
     IDS_PREPARING           "正在准备..."
     IDS_E_OPEN_FILE         "%s"" 文件打开失败"
     IDS_WANT_EXTRACT_ANYWAY "已取消清除目标目录.\n是否继续提取文件?"
     IDS_CLOSE               "关闭"
-    IDS_N_ITEMS_SELECTED    "%u 项目已选择"
+    IDS_N_ITEMS_SELECTED    "%u 已选择"
     IDS_CANCELLING          "正在取消..."
     IDS_FILE_EXISTS         "文件已存在"
     IDS_FILE_EXISTS_OVERWRITE "%s"" 文件已存在. 是否覆盖?"
     IDS_E_SAVE_FILE         "%s"" 文件保存失败"
     IDS_CONTINUE_NO_LISTFILE 
-                            "未找到列表文件 ""%s"".是否继续?"
+                            "%s"" 列表文件未找到.是否继续?"
     IDS_LOADING_TACT_KEYS   "正在下载 TACT 密钥..."
     IDS_E_NO_LISTFILE       "未输入列表文件."
 END
@@ -1295,12 +1295,12 @@ BEGIN
     IDS_VIEWER_TITLE_NULL   "查看器"
     IDS_VIEWER_TITLE_ERROR  "%s [错误] - 查看器"
     IDS_E_STORAGE_PARAMS_OLD_FORMAT 
-                            "若储存参数为旧格式, 使用冒号 (':') 隔开.\n否则请用星号 ('*') 隔开."
+                            "旧格式的储存参数使用冒号 (':') 隔开.\n否则请用星号 ('*') 隔开."
     IDS_LOADING_FILE        "加载文件..."
     IDS_E_STORAGE_PARAMS_WRONG 
                             "储存参数格式错误.\n请运行 CascView.exe 命令行选项查看语法."
     IDS_E_OPEN_STORAGE_FILE_NOT_FOUND 
-                            "%s"" 储存打开失败, 因为找不到必要文件.\n请检查是否存在 .build.info , .build.db 或 versions 格式的文件."
+                            "%s"" 储存打开失败, 因为找不到必要文件.\n请检查 .build.info , .build.db 或版本的格式文件是否存在."
     IDS_DONE                "完成."
     IDS_CANCELLED           "被用户取消."
     IDS_TITLE_ERROR         "错误"
