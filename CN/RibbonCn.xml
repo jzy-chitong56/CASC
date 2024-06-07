@@ -392,7 +392,7 @@
         <!-- The "Export Listfile" button -->
         <Command Name="cmdToolsExportListfile" Symbol="IDC_TOOLS_EXPORT_LISTFILE">
             <Command.LabelTitle>
-                <String>导出列表文件</String>
+                <String>提取列表文件</String>
             </Command.LabelTitle>
             <Command.LargeImages>
                 <Image>ribbon/ExportListfileL.bmp</Image>
