@@ -244,7 +244,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "信息",IDC_STATIC,7,6,287,76
     ICON            IDI_MAIN_ICON,IDC_APP_ICON,13,21,20,20
-    LTEXT           "Ladik's CASC 查看器(网络版)  v %u.%u.%u.%u (%u-bit %s build)\nCopyright (c) Ladislav Zezula 2013 - 2019",IDC_VERSION,49,20,239,17,SS_NOPREFIX
+    LTEXT           "Ladik's CASC 查看器(网络版) v %u.%u.%u.%u (%u-bit %s build)\nCopyright (c) Ladislav Zezula 2013 - 2019",IDC_VERSION,49,20,239,17,SS_NOPREFIX
     LTEXT           "内核: CascLib v %u.%02u",IDC_CASCLIB_VERSION,49,45,239,12
     CONTROL         "http://www.zezula.net/casc.html",IDC_URL,"Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,49,64,119,11
     DEFPUSHBUTTON   "确定",IDOK,244,87,50,14,WS_GROUP
@@ -273,7 +273,7 @@ BEGIN
     EDITTEXT        IDC_CKEY_EKEY,75,32,301,14,ES_AUTOHSCROLL
     LTEXT           "关键字:",IDC_STATIC,16,51,55,14,SS_CENTERIMAGE
     EDITTEXT        IDC_SEARCH_TEXT,75,51,301,14,ES_AUTOHSCROLL
-    CONTROL         "区分大小写;",IDC_CASE_SENSITIVE,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,75,68,81,10
+    CONTROL         "区分大小写",IDC_CASE_SENSITIVE,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,75,68,81,10
     CONTROL         "全字匹配",IDC_WHOLE_WORDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,68,81,10
     CONTROL         "全路径匹配",IDC_WHOLE_PATH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,246,68,81,10
     CONTROL         "十六进制字符串",IDC_HEXA_STRING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,330,68,81,10
@@ -298,7 +298,7 @@ BEGIN
     GROUPBOX        "其他选项",-1,7,40,254,79
     CONTROL         "清空提取目录",IDC_DELETE_EXISTING_FILES,
                     "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,52,242,8
-    CONTROL         "提取纯名称，忽略储存目录结构",IDC_EXTRACT_PLAIN_NAME,
+    CONTROL         "提取纯名称,忽略储存目录结构",IDC_EXTRACT_PLAIN_NAME,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,65,242,8
     CONTROL         "跳过大小为0字节的文件",IDC_SKIP_ZERO_SIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,78,242,8
     CONTROL         "跳过密钥未知的加密文件",IDC_SKIP_ENCRYPTED,
@@ -349,7 +349,7 @@ END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 395, 220
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
-CAPTION "%s"" 属性"
+CAPTION """%s"" 属性"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CTEXT           "载入中...",IDC_LOADING,7,7,381,187,SS_CENTERIMAGE | SS_SUNKEN
@@ -434,7 +434,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPT
 CAPTION "属性查看器"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    GROUPBOX        "自动比例 (文本视图) ",IDC_STATIC,7,6,254,66
+    GROUPBOX        "自动比例 (文本视图)",IDC_STATIC,7,6,254,66
     LTEXT           "",IDC_FONT_NAME1,14,17,188,14,SS_CENTERIMAGE
     LTEXT           "ABCDEFGHIJKLMNOPQRSTUVWXYZ\nabcdefghijklmnopqrstuvwxyzěščřžýáíé",IDC_FONT1,12,36,244,30,SS_SUNKEN
     PUSHBUTTON      "修改...",IDC_SELECT_FONT1,205,17,50,14
@@ -481,12 +481,12 @@ BEGIN
     CONTROL         "工具栏显示小图标",IDC_SMALL_TOOLBAR_BUTTONS,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,84,251,10
     GROUPBOX        "提取设置",-1,7,106,269,43
-    CONTROL         "文件重名时自动覆盖，不再询问",IDC_AUTO_OVERWRITE,
+    CONTROL         "文件重名时自动覆盖,不再询问",IDC_AUTO_OVERWRITE,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,119,251,10
     CONTROL         "提取文件时显示选项对话框(s)",IDC_SHOW_EXTRACT_OPTIONS,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,132,251,10
     GROUPBOX        "本地化",-1,7,153,269,51
-    LTEXT           "列表只显示与储存区域相同的文件.\n仅适用于使用区域设置的存储，如魔兽世界.",-1,12,164,259,17
+    LTEXT           "列表只显示与储存区域相同的文件.\n仅适用于使用区域设置的存储,如魔兽世界.",-1,12,164,259,17
     PUSHBUTTON      "(默认区域)",IDC_LOCALE_LIST,12,184,259,13,BS_CENTER
 END
 
@@ -515,7 +515,7 @@ CAPTION "魔兽世界(怀旧版)列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_CLASSIC,7,3,269,62
-    LTEXT           "输入魔兽世界(怀旧版)列表文件名(TXT格式)",IDC_LABEL_TXT,13,13,257,9
+    LTEXT           "输入魔兽世界(怀旧版)列表文件名 (TXT格式)",IDC_LABEL_TXT,13,13,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,24,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,256,24,15,14
     CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
@@ -574,7 +574,7 @@ CAPTION "导出到元存储"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_RETAIL,7,3,269,110
-    LTEXT           "元存储可以包含多个游戏构建, 不同于自建版本或 .build 或 .info 文件. 元储存所有版本共用相同的文件，\n大量节省磁盘空间.",IDC_STATIC,13,13,257,26
+    LTEXT           "元存储可以包含多个游戏构建, 不同于自建版本或 .build 或 .info 文件. 元储存所有版本共用相同的文件,\n大量节省磁盘空间.",IDC_STATIC,13,13,257,26
     LTEXT           "目标文件夹:",IDC_STATIC,12,47,258,8
     EDITTEXT        IDC_TARGET_FOLDER,12,57,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_TARGET_FOLDER_BROWSE,256,57,15,14
@@ -587,7 +587,7 @@ END
 
 IDD_LOCALE_MASK DIALOGEX 0, 0, 310, 129
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "本地化文件"
+CAPTION "选择区域"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_STATIC,7,3,296,98
@@ -1107,10 +1107,10 @@ BEGIN
     IDS_GAME_PATH           "安装路径"
     IDS_NOT_AVAILABLE       "(无法获取)"
     IDS_VIEW_RIBBON_MENU    "导航菜单"
-    IDS_E_LISTFILE_INVALID  "%s 列表文件太长或太大，无法写入 (s)"
+    IDS_E_LISTFILE_INVALID  "%s 列表文件太长或太大,无法写入 (s)"
     IDS_NO_STORAGE_SELECTED "未选择储存.\n请重新选择."
     IDS_E_MISSING_TARGET_LISTFILE "缺少输入输出列表文件"
-    IDS_E_OPEN_STORAGE      "%s"" 储存打开失败."
+    IDS_E_OPEN_STORAGE      "%s"" 储存打开失败""."
 END
 
 STRINGTABLE
@@ -1123,13 +1123,13 @@ BEGIN
     IDS_NOTHING_TO_EXPORT   "无可导出内容. 请选择文件或文件哈希."
     IDS_YES                 "是"
     IDS_NO                  "否"
-    IDS_E_LOAD_PRODUCT_DB   "%s"" 文件加载失败.\n无法确定已安装游戏列表."
+    IDS_E_LOAD_PRODUCT_DB   "%s"" 文件加载失败.\n无法确定已安装游戏列表""."
     IDS_E_MISSING_INPUT_LISTFILES "未输入任何输入列表文件"
     IDS_INVALID_PARAMETER   "%s.\n是否显示命令行选项?"
     IDS_ENTER_KEY_VALUE     "<在此输入键值>"
     IDS_SPAN_COUNT          "跨度数"
     IDS_FILE_MASK_CUE       "输入文件名或通配符"
-    IDS_E_LOAD_FILE         "%s"" 文件加载失败."
+    IDS_E_LOAD_FILE         "%s"" 文件加载失败""."
     IDS_FILEDATAID          "文件数据ID"
 END
 
@@ -1159,10 +1159,10 @@ STRINGTABLE
 BEGIN
     IDS_TARGET_IN_SOURCE    "目标文件 (%s) 已存在于源列表文件指定的列表中. 如果继续, 合并的源列表文件将覆盖目标列表文件. 是否继续?"
     IDS_E_CREATE_LISTFILE   "创建目标列表文件失败 (%s)."
-    IDS_E_NOT_ENOUGH_MEMORY "内存不足，合并失败."
+    IDS_E_NOT_ENOUGH_MEMORY "内存不足,合并失败."
     IDS_CLEANING_UP         "正在清理..."
     IDS_LISTFILES_MERGED    "列表文件已成功合并到 %s."
-    IDS_E_LISTFILE_NOT_FOUND "未找到列表文件 ""%s"
+    IDS_E_LISTFILE_NOT_FOUND "未找到列表文件 ""%s""."
     IDS_SORTING_LISTFILES   "排序列表文件..."
     IDS_ADD_LISTFILES       "添加要合并的列表文件"
     IDS_SEGMENT_INDEX       "索引块"
@@ -1201,7 +1201,7 @@ BEGIN
     IDS_ZERO_TAG_COMBINATION 
                             "将隐藏所选的标签组合结果."
     IDS_FOUND_FILES         "搜索完成. 共找到 %u 个文件(s)."
-    IDS_PROPERTIES_FOR      "%s"" 属性"
+    IDS_PROPERTIES_FOR      "%s"" 属性"""
     IDS_E_DOWNLOAD_LISTFILE "下载列表文件失败 (错误代码 %08X)"
     IDS_DOWNLOADING_LISTFILE "正在下载列表文件 ..."
     IDS_PRODUCT_NAME        "项目名称"
@@ -1213,7 +1213,7 @@ BEGIN
     IDS_FOLDER_NAME         "文件夹名称:"
     IDS_E_OPEN_CANCELLED    "已取消打开储存."
     IDS_OPENING_STORAGE     "正在打本本地储存..."
-    IDS_E_GET_PROPERTIES    "%s"" 属性加载失败"
+    IDS_E_GET_PROPERTIES    "%s"" 属性加载失败""."
     IDS_LOADING_FILES       "正在加载储存文件..."
 END
 
@@ -1225,7 +1225,7 @@ BEGIN
     IDS_EXTRACTING_FILES    "正在提取储存的文件..."
     IDS_BROWSE_TARGET_DIRECTORY "选择要提取的目标目录"
     IDS_FILE_MASK           "文件名:"
-    IDS_E_EXTRACT_FILE      "%s"" 文件提取失败"
+    IDS_E_EXTRACT_FILE      "%s"" 文件提取失败""."
     IDS_FILE_OF_FILES       "正在检查 %u 到 %u ..."
     IDS_EMPTY_STRING        " "
     IDS_ELAPSED_TIME        "运行时间: %u:%02u:%02u"
@@ -1282,7 +1282,7 @@ BEGIN
     IDS_CANCELLING          "正在取消..."
     IDS_FILE_EXISTS         "文件已存在"
     IDS_FILE_EXISTS_OVERWRITE "%s"" 文件已存在. 是否覆盖?"
-    IDS_E_SAVE_FILE         "%s"" 文件保存失败"
+    IDS_E_SAVE_FILE         "%s"" 文件保存失败""."
     IDS_CONTINUE_NO_LISTFILE 
                             "%s"" 列表文件未找到.是否继续?"
     IDS_LOADING_TACT_KEYS   "正在下载 TACT 密钥..."
@@ -1300,7 +1300,7 @@ BEGIN
     IDS_E_STORAGE_PARAMS_WRONG 
                             "储存参数格式错误.\n请运行 CascView.exe 命令行选项查看语法."
     IDS_E_OPEN_STORAGE_FILE_NOT_FOUND 
-                            "%s"" 储存打开失败, 因为找不到必要文件.\n请检查 .build.info , .build.db 或版本的格式文件是否存在."
+                            "%s"" 储存打开失败, 因为找不到必要文件.\n请检查 "".build.info"" , "".build.db"" 或版本""的格式文件是否存在."
     IDS_DONE                "完成."
     IDS_CANCELLED           "被用户取消."
     IDS_TITLE_ERROR         "错误"
@@ -1332,4 +1332,3 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
-
