@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='unicode'?>
+<?xml version='1.0' encoding='unicode'?>
 
 <Application xmlns='http://schemas.microsoft.com/windows/2009/Ribbon'>
 
@@ -106,7 +106,7 @@
         <!-- The "Open CASC Storage" button -->
         <Command Name="cmdFileOpen" Symbol="IDC_FILE_OPEN">
             <Command.LabelTitle>
-                <String>打开储存</String>
+                <String>打开本地储存</String>
             </Command.LabelTitle>
             <Command.LabelDescription>
                 <String>打开本地储存</String>
@@ -122,7 +122,7 @@
         <!-- The "Open Game Storage" button -->
         <Command Name="cmdFileOpenGame" Symbol="IDC_FILE_OPEN_GAME">
             <Command.LabelTitle>
-                <String>打开储存</String>
+                <String>打开已安装储存</String>
             </Command.LabelTitle>
             <Command.LabelDescription>
                 <String>打开已安装的储存</String>
@@ -154,7 +154,7 @@
         <!-- The "Close" button -->
         <Command Name="cmdFileClose" Symbol="IDC_FILE_CLOSE">
             <Command.LabelTitle>
-                <String>关闭储存</String>
+                <String>关闭当前储存</String>
             </Command.LabelTitle>
             <Command.LabelDescription>
                 <String>关闭当前储存</String>
