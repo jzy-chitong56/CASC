@@ -295,7 +295,7 @@ BEGIN
     LTEXT           "将文件提取到这个目录:",IDC_TITLE,8,10,252,8
     EDITTEXT        IDC_EXTRACT_TO,7,22,234,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE,245,22,16,14
-    GROUPBOX        "其他选项",-1,7,40,254,79
+    GROUPBOX        "附加选项",-1,7,40,254,79
     CONTROL         "清空提取目录",IDC_DELETE_EXISTING_FILES,
                     "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,52,242,8
     CONTROL         "提取纯名称,忽略储存目录结构",IDC_EXTRACT_PLAIN_NAME,
@@ -944,7 +944,7 @@ BEGIN
         MENUITEM "打开\tEnter",                ID_OPS_OPEN
         MENUITEM "打开方式...\tShift+Enter", ID_OPS_OPEN_WITH
         MENUITEM SEPARATOR
-        MENUITEM "视图\tF3",                   ID_OPS_VIEW
+        MENUITEM "查看\tF3",                   ID_OPS_VIEW
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
         MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
         MENUITEM SEPARATOR
@@ -985,7 +985,7 @@ BEGIN
     BEGIN
         MENUITEM "提取...\tCtrl+S",          ID_FILE_EXPORT
         MENUITEM SEPARATOR
-        MENUITEM "关闭e\tAlt+F4",              ID_FILE_EXIT
+        MENUITEM "关闭\tAlt+F4",              ID_FILE_EXIT
     END
     POPUP "视图"
     BEGIN
@@ -1109,7 +1109,7 @@ BEGIN
     IDS_VIEW_RIBBON_MENU    "导航菜单"
     IDS_E_LISTFILE_INVALID  "%s 列表文件太长或太大,无法写入 (s)"
     IDS_NO_STORAGE_SELECTED "未选择储存.\n请重新选择."
-    IDS_E_MISSING_TARGET_LISTFILE "缺少输入输出列表文件"
+    IDS_E_MISSING_TARGET_LISTFILE "缺少输出列表文件"
     IDS_E_OPEN_STORAGE      "%s"" 储存打开失败""."
 END
 
