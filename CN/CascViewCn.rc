@@ -149,18 +149,18 @@ END
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE 
+1 TEXTINCLUDE
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE 
+2 TEXTINCLUDE
 BEGIN
     "#include ""afxres.h""\r\n"
     "\0"
 END
 
-3 TEXTINCLUDE 
+3 TEXTINCLUDE
 BEGIN
     "\r\n"
     "\0"
@@ -213,7 +213,7 @@ IDI_GAME_ARCADE         ICON                    "res\\IconGameArcade.ico"
 // Simplified Chinese resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-LANGUAGE LANG_SIMPLIFIED_CHINESE, SUBLANG_SIMPLIFIED_CHINESE
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -349,7 +349,7 @@ END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 395, 220
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
-CAPTION """%s"" 属性"
+CAPTION "%s"" 属性"""
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CTEXT           "载入中...",IDC_LOADING,7,7,381,187,SS_CENTERIMAGE | SS_SUNKEN
@@ -502,7 +502,7 @@ BEGIN
     CONTROL         "下载魔兽世界社区列表文件 (CSV格式, github.com/wowdev)",IDC_DOWNLOAD_CSV,
                     "Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,12,49,259,13
     GROUPBOX        "魔兽世界怀旧版",IDC_WOW_CLASSIC,7,76,269,61
-    LTEXT           "输入魔兽世界(怀旧版)列表文件名(TXT格式)",IDC_LABEL_TXT,13,89,257,9
+    LTEXT           "输入魔兽世界(怀旧版)列表文件名 (TXT格式)",IDC_LABEL_TXT,13,89,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,100,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,257,100,15,14
     CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
@@ -973,7 +973,7 @@ BEGIN
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
         MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
     END
-    POPUP "表头"
+    POPUP "__LIST_HEADER__"
     BEGIN
         MENUITEM "恢复列表到默认视图",   ID_VIEW_RESET_COLUMNS
     END
@@ -1107,7 +1107,7 @@ BEGIN
     IDS_GAME_PATH           "安装路径"
     IDS_NOT_AVAILABLE       "(无法获取)"
     IDS_VIEW_RIBBON_MENU    "导航菜单"
-    IDS_E_LISTFILE_INVALID  "%s 列表文件太长或太大,导入失败 (s)"
+    IDS_E_LISTFILE_INVALID  "%s 列表文件太长或太大,写入失败 (s)"
     IDS_NO_STORAGE_SELECTED "未选择储存.\n请重新选择."
     IDS_E_MISSING_TARGET_LISTFILE "缺少输出列表文件"
     IDS_E_OPEN_STORAGE      "%s"" 储存打开失败""."
@@ -1119,12 +1119,12 @@ BEGIN
     IDS_LOADING_TREE        "正在加载 ..."
     IDS_FILE_EXTRACT_REPORT "提取出错. 仅成功提取了部分文件: %u 到 %u."
     IDS_LISTFILES_CREATED   "列表文件创建成功:\n%s"
-    IDS_WRITING_LISTFILE    "导入列表文件..."
+    IDS_WRITING_LISTFILE    "正在写入列表文件..."
     IDS_NOTHING_TO_EXPORT   "无可导出内容. 请选择文件或文件哈希."
     IDS_YES                 "是"
     IDS_NO                  "否"
     IDS_E_LOAD_PRODUCT_DB   "%s"" 文件加载失败.\n无法确定已安装游戏列表""."
-    IDS_E_MISSING_INPUT_LISTFILES "未选择导入列表文件"
+    IDS_E_MISSING_INPUT_LISTFILES "未选择写入列表文件"
     IDS_INVALID_PARAMETER   "%s.\n是否显示命令行选项?"
     IDS_ENTER_KEY_VALUE     "<在此输入键值>"
     IDS_SPAN_COUNT          "跨度数"
@@ -1147,11 +1147,11 @@ BEGIN
     IDS_STRING              "%s"
     IDS_CKEY_EKEY_CUE       "输入完整或部分 CKey/EKey 作为六进制字符串"
     IDC_SEARCH_TEXT_CUE     "输入搜索文件必含字符串"
-    IDS_E_INVALID_SEARCH_MASK 
+    IDS_E_INVALID_SEARCH_MASK
                             "搜索的文件名无效.请输入文件名或通配符."
     IDS_E_INVALID_CKEY_EKEY "搜索的 CKey/EKey 无效. 请输入长度不超过16个字符的六进制字符串或字节序列."
     IDS_CLEARING_DIRECTORY  "清空目标目录..."
-    IDS_W_CANT_CLEAR_DIRECTORY 
+    IDS_W_CANT_CLEAR_DIRECTORY
                             "%s"" 目标目录清空失败"".\n是否继续提取文件?"
 END
 
@@ -1185,9 +1185,9 @@ BEGIN
     IDS_CONTENT_FLAGS       "内容标志"
     IDS_FILE_DATA_ID        "文件数据Id"
     IDS_SIZE64              "%s 字节"
-    IDS_FILTERS_LISTFILES_CSV 
+    IDS_FILTERS_LISTFILES_CSV
                             "CSV 列表文件 (*.csv)|*.csv|所有文件 (*.*)|*.*||"
-    IDS_FILTERS_LISTFILES_TXT 
+    IDS_FILTERS_LISTFILES_TXT
                             "Text 列表文件 (*.txt)|*.txt|所有文件 (*.*)|*.*||"
     IDS_IMAGE_BLP           "BLP: 暴雪魔兽系列纹理文件"
     IDS_IMAGE_PCX           "PCX: ZSoft PiCture eXchange image"
@@ -1198,7 +1198,7 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_ZERO_TAG_COMBINATION 
+    IDS_ZERO_TAG_COMBINATION
                             "将隐藏所选的标签组合结果."
     IDS_FOUND_FILES         "搜索完成. 共找到 %u 个文件(s)."
     IDS_PROPERTIES_FOR      "%s"" 属性"""
@@ -1283,7 +1283,7 @@ BEGIN
     IDS_FILE_EXISTS         "文件已存在"
     IDS_FILE_EXISTS_OVERWRITE "%s"" 文件已存在. 是否覆盖?"
     IDS_E_SAVE_FILE         "%s"" 文件保存失败""."
-    IDS_CONTINUE_NO_LISTFILE 
+    IDS_CONTINUE_NO_LISTFILE
                             "%s"" 列表文件未找到.是否继续?"
     IDS_LOADING_TACT_KEYS   "正在下载 TACT 密钥..."
     IDS_E_NO_LISTFILE       "未输入列表文件."
@@ -1294,12 +1294,12 @@ BEGIN
     IDS_W_DOWNLOAD_TACT_KEYS "下载密钥失败"
     IDS_VIEWER_TITLE_NULL   "查看器"
     IDS_VIEWER_TITLE_ERROR  "%s [错误] - 查看器"
-    IDS_E_STORAGE_PARAMS_OLD_FORMAT 
+    IDS_E_STORAGE_PARAMS_OLD_FORMAT
                             "旧格式的储存参数使用冒号 (':') 隔开.\n否则请用星号 ('*') 隔开."
     IDS_LOADING_FILE        "加载文件..."
-    IDS_E_STORAGE_PARAMS_WRONG 
+    IDS_E_STORAGE_PARAMS_WRONG
                             "储存参数格式错误.\n请运行 CascView.exe 命令行选项查看语法."
-    IDS_E_OPEN_STORAGE_FILE_NOT_FOUND 
+    IDS_E_OPEN_STORAGE_FILE_NOT_FOUND
                             "%s"" 储存打开失败, 因为找不到必要文件.\n请检查 "".build.info"" , "".build.db"" 或版本""的格式文件是否存在."
     IDS_DONE                "完成."
     IDS_CANCELLED           "被用户取消."
@@ -1316,6 +1316,13 @@ STRINGTABLE
 BEGIN
     IDS_IMAGE_VIEW          "查看贴图"
     IDS_FILTERS_DIRECTORIES "目录|*.目录||"
+    IDS_PMSG_FORMAT         "%s ..."
+    IDS_PMSG_FORMAT_X_OF_Y  "%s (%u 于 %u) ..."
+    IDS_PMSG_LOADING_FILE   "正在加载文件: %s"
+    IDS_PMSG_LOADING_MANIFEST "正在加载清单: %s"
+    IDS_PMSG_DOWNLOADING_FILE "正在下载文件: %s"
+    IDS_PMSG_LOADING_INDEX_FILES "正在加载文件索引"
+    IDS_PMSG_DOWNLOADING_ARCHIVE_INDEXES "正在下载档案索引"
 END
 
 #endif    // Simplified Chinese resources
