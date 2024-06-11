@@ -1124,7 +1124,7 @@ BEGIN
     IDS_YES                 "是"
     IDS_NO                  "否"
     IDS_E_LOAD_PRODUCT_DB   "%s"" 文件加载失败.\n无法确定已安装游戏列表""."
-    IDS_E_MISSING_INPUT_LISTFILES "未选择写入列表文件"
+    IDS_E_MISSING_INPUT_LISTFILES "未选择列表文件"
     IDS_INVALID_PARAMETER   "%s.\n是否显示命令行选项?"
     IDS_ENTER_KEY_VALUE     "<在此输入键值>"
     IDS_SPAN_COUNT          "跨度数"
@@ -1146,7 +1146,7 @@ BEGIN
     IDS_NOT_AVAIL           "<n/a>"
     IDS_STRING              "%s"
     IDS_CKEY_EKEY_CUE       "输入完整或部分 CKey/EKey 作为六进制字符串"
-    IDC_SEARCH_TEXT_CUE     "输入搜索文件必含字符串"
+    IDC_SEARCH_TEXT_CUE     "输入搜索文件包含的字符串"
     IDS_E_INVALID_SEARCH_MASK
                             "搜索的文件名无效.请输入文件名或通配符."
     IDS_E_INVALID_CKEY_EKEY "搜索的 CKey/EKey 无效. 请输入长度不超过16个字符的六进制字符串或字节序列."
