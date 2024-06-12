@@ -349,7 +349,7 @@ END
 
 IDD_FILE_PROPERTIES DIALOGEX 0, 0, 395, 220
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
-CAPTION "%s"" 属性"""
+CAPTION "%s 属性"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     CTEXT           "载入中...",IDC_LOADING,7,7,381,187,SS_CENTERIMAGE | SS_SUNKEN
@@ -486,7 +486,7 @@ BEGIN
     CONTROL         "提取文件时显示选项对话框(s)",IDC_SHOW_EXTRACT_OPTIONS,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,132,251,10
     GROUPBOX        "本地化",-1,7,153,269,51
-    LTEXT           "列表只显示与储存区域相同的文件.\n仅适用于使用区域设置的存储,如魔兽世界.",-1,12,164,259,17
+    LTEXT           "列表只显示与选择区域相同的文件.\n仅适用于使用了区域设置的存储,如魔兽世界.",-1,12,164,259,17
     PUSHBUTTON      "(默认区域)",IDC_LOCALE_LIST,12,184,259,13,BS_CENTER
 END
 
@@ -496,13 +496,13 @@ CAPTION "列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "魔兽世界(正式服)",IDC_WOW_RETAIL,7,7,269,61
-    LTEXT           "输入魔兽世界列表文件名 (CSV格式, 正式服或测试服)",IDC_LABEL_CSV,13,19,257,9
+    LTEXT           "选择魔兽世界列表文件 (CSV格式, 正式服或测试服)",IDC_LABEL_CSV,13,19,257,9
     EDITTEXT        IDC_LISTFILE_CSV,12,31,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_CSV,256,30,15,14
     CONTROL         "下载魔兽世界社区列表文件 (CSV格式, github.com/wowdev)",IDC_DOWNLOAD_CSV,
                     "Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,12,49,259,13
     GROUPBOX        "魔兽世界怀旧版",IDC_WOW_CLASSIC,7,76,269,61
-    LTEXT           "输入魔兽世界(怀旧版)列表文件名 (TXT格式)",IDC_LABEL_TXT,13,89,257,9
+    LTEXT           "选择魔兽世界(怀旧版)列表文件 (TXT格式)",IDC_LABEL_TXT,13,89,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,100,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,257,100,15,14
     CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
@@ -515,7 +515,7 @@ CAPTION "魔兽世界(怀旧版)列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_CLASSIC,7,3,269,62
-    LTEXT           "输入魔兽世界(怀旧版)列表文件名 (TXT格式)",IDC_LABEL_TXT,13,13,257,9
+    LTEXT           "选择魔兽世界(怀旧版)列表文件 (TXT格式)",IDC_LABEL_TXT,13,13,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,24,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,256,24,15,14
     CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
@@ -530,7 +530,7 @@ CAPTION "魔兽世界列表文件 (正式服或测试服)"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_RETAIL,7,3,269,62
-    LTEXT           "输入魔兽世界列表文件名 (CSV格式, 正式服或测试服)",IDC_LABEL_CSV,13,13,257,9
+    LTEXT           "选择魔兽世界列表文件 (CSV格式, 正式服或测试服)",IDC_LABEL_CSV,13,13,257,9
     EDITTEXT        IDC_LISTFILE_CSV,12,24,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_CSV,256,24,15,14
     CONTROL         "下载魔兽世界社区列表文件 (CSV格式, github.com/wowdev)",IDC_DOWNLOAD_CSV,
@@ -562,7 +562,7 @@ BEGIN
     GROUPBOX        "加密文件名 ",IDC_STATIC,7,4,291,33
     EDITTEXT        IDC_FILE_NAME,13,16,280,14,ES_AUTOHSCROLL | ES_READONLY
     GROUPBOX        "输入密钥",IDC_STATIC,7,39,291,71
-    LTEXT           "六进制-blob型 (""0011223344"") 或 六进制-数值型 (""0x00, 0x11, 0x22"").\n密钥必须为16位字符.",IDC_STATIC,12,49,281,17
+    LTEXT           "六进制-blob型 (0011223344) 或 六进制-数值型 (0x00, 0x11, 0x22).\n密钥必须为16位字符.",IDC_STATIC,12,49,281,17
     LTEXT           "Key 名: ",IDC_STATIC,13,70,41,14,SS_CENTERIMAGE
     EDITTEXT        IDC_KEY_NAME,58,70,235,14,ES_AUTOHSCROLL | ES_READONLY
     LTEXT           "Key 值: ",IDC_STATIC,13,90,41,14,SS_CENTERIMAGE
@@ -1110,7 +1110,7 @@ BEGIN
     IDS_E_LISTFILE_INVALID  "%s 列表文件太长或太大,写入失败 (s)"
     IDS_NO_STORAGE_SELECTED "未选择储存.\n请重新选择."
     IDS_E_MISSING_TARGET_LISTFILE "缺少输出列表文件"
-    IDS_E_OPEN_STORAGE      "%s"" 储存打开失败""."
+    IDS_E_OPEN_STORAGE      "%s 储存打开失败."
 END
 
 STRINGTABLE
@@ -1123,13 +1123,13 @@ BEGIN
     IDS_NOTHING_TO_EXPORT   "无可导出内容. 请选择文件或文件哈希."
     IDS_YES                 "是"
     IDS_NO                  "否"
-    IDS_E_LOAD_PRODUCT_DB   "%s"" 文件加载失败.\n无法确定已安装游戏列表""."
+    IDS_E_LOAD_PRODUCT_DB   "%s 文件加载失败.\n无法确定已安装游戏列表."
     IDS_E_MISSING_INPUT_LISTFILES "未选择列表文件"
     IDS_INVALID_PARAMETER   "%s.\n是否显示命令行选项?"
     IDS_ENTER_KEY_VALUE     "<在此输入键值>"
     IDS_SPAN_COUNT          "跨度数"
     IDS_FILE_MASK_CUE       "输入文件名或通配符"
-    IDS_E_LOAD_FILE         "%s"" 文件加载失败""."
+    IDS_E_LOAD_FILE         "%s 文件加载失败."
     IDS_FILEDATAID          "文件数据ID"
 END
 
@@ -1152,7 +1152,7 @@ BEGIN
     IDS_E_INVALID_CKEY_EKEY "搜索的 CKey/EKey 无效. 请输入长度不超过16个字符的六进制字符串或字节序列."
     IDS_CLEARING_DIRECTORY  "清空目标目录..."
     IDS_W_CANT_CLEAR_DIRECTORY
-                            "%s"" 目标目录清空失败"".\n是否继续提取文件?"
+                            "%s 目标目录清空失败.\n是否继续提取文件?"
 END
 
 STRINGTABLE
@@ -1162,7 +1162,7 @@ BEGIN
     IDS_E_NOT_ENOUGH_MEMORY "内存不足,合并失败."
     IDS_CLEANING_UP         "正在清理..."
     IDS_LISTFILES_MERGED    "列表文件已成功合并到 %s."
-    IDS_E_LISTFILE_NOT_FOUND "未找到列表文件 ""%s""."
+    IDS_E_LISTFILE_NOT_FOUND "%s 列表文件未找到."
     IDS_SORTING_LISTFILES   "排序列表文件..."
     IDS_ADD_LISTFILES       "添加要合并的列表文件"
     IDS_SEGMENT_INDEX       "索引块"
@@ -1201,7 +1201,7 @@ BEGIN
     IDS_ZERO_TAG_COMBINATION
                             "将隐藏所选的标签组合结果."
     IDS_FOUND_FILES         "搜索完成. 共找到 %u 个文件(s)."
-    IDS_PROPERTIES_FOR      "%s"" 属性"""
+    IDS_PROPERTIES_FOR      "%s 属性"
     IDS_E_DOWNLOAD_LISTFILE "下载列表文件失败 (错误代码 %08X)"
     IDS_DOWNLOADING_LISTFILE "正在下载列表文件 ..."
     IDS_PRODUCT_NAME        "项目名称"
@@ -1213,7 +1213,7 @@ BEGIN
     IDS_FOLDER_NAME         "文件夹名称:"
     IDS_E_OPEN_CANCELLED    "已取消打开储存."
     IDS_OPENING_STORAGE     "正在打本本地储存..."
-    IDS_E_GET_PROPERTIES    "%s"" 属性加载失败""."
+    IDS_E_GET_PROPERTIES    "%s 属性加载失败."
     IDS_LOADING_FILES       "正在加载储存文件..."
 END
 
@@ -1225,7 +1225,7 @@ BEGIN
     IDS_EXTRACTING_FILES    "正在提取储存的文件..."
     IDS_BROWSE_TARGET_DIRECTORY "选择要提取的目标目录"
     IDS_FILE_MASK           "文件名:"
-    IDS_E_EXTRACT_FILE      "%s"" 文件提取失败""."
+    IDS_E_EXTRACT_FILE      "%s 文件提取失败."
     IDS_FILE_OF_FILES       "正在检查 %u 到 %u ..."
     IDS_EMPTY_STRING        " "
     IDS_ELAPSED_TIME        "运行时间: %u:%02u:%02u"
@@ -1271,20 +1271,20 @@ END
 STRINGTABLE
 BEGIN
     IDS_STOP_SEARCH         "停止搜索"
-    IDS_E_BAD_HEXA_STRING   "无效的六进制字符串. 请遵循以下格式重新输入:\n""0A CC F8 15 33""."
+    IDS_E_BAD_HEXA_STRING   "无效的六进制字符串. 请遵循以下格式重新输入:\n0A CC F8 15 33."
     IDS_FILTERS_IMAGES      "BMP文件 (*.bmp)|*.bmp|PNG文件 (*.png)|*.png||"
     IDS_IMAGE_SAVED         "%s 保存成功."
     IDS_PREPARING           "正在准备..."
-    IDS_E_OPEN_FILE         "%s"" 文件打开失败"
+    IDS_E_OPEN_FILE         "%s 文件打开失败"
     IDS_WANT_EXTRACT_ANYWAY "已取消清除目标目录.\n是否继续提取文件?"
     IDS_CLOSE               "关闭"
     IDS_N_ITEMS_SELECTED    "%u 已选择"
     IDS_CANCELLING          "正在取消..."
     IDS_FILE_EXISTS         "文件已存在"
-    IDS_FILE_EXISTS_OVERWRITE "%s"" 文件已存在. 是否覆盖?"
-    IDS_E_SAVE_FILE         "%s"" 文件保存失败""."
+    IDS_FILE_EXISTS_OVERWRITE "%s 文件已存在. 是否覆盖?"
+    IDS_E_SAVE_FILE         "%s 文件保存失败."
     IDS_CONTINUE_NO_LISTFILE
-                            "%s"" 列表文件未找到.是否继续?"
+                            "%s 列表文件未找到.是否继续?"
     IDS_LOADING_TACT_KEYS   "正在下载 TACT 密钥..."
     IDS_E_NO_LISTFILE       "未输入列表文件."
 END
@@ -1300,7 +1300,7 @@ BEGIN
     IDS_E_STORAGE_PARAMS_WRONG
                             "储存参数格式错误.\n请运行 CascView.exe 命令行选项查看语法."
     IDS_E_OPEN_STORAGE_FILE_NOT_FOUND
-                            "%s"" 储存打开失败, 因为找不到必要文件.\n请检查 "".build.info"" , "".build.db"" 或版本""的格式文件是否存在."
+                            "%s 储存打开失败, 因为找不到必要文件.\n请检查 .build.info, .build.db 或 版本 的格式文件是否存在."
     IDS_DONE                "完成."
     IDS_CANCELLED           "被用户取消."
     IDS_TITLE_ERROR         "错误"
