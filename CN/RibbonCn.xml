@@ -327,7 +327,7 @@
         <!-- The "File Tags" button -->
         <Command Name="cmdOpsTagFilter" Symbol="IDC_OPS_TAG_FILTER">
             <Command.LabelTitle>
-                <String>标签过滤</String>
+                <String>过滤标签</String>
             </Command.LabelTitle>
             <Command.LargeImages>
                 <Image>ribbon/FileTagsL.bmp</Image>
