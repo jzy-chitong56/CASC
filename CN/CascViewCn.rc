@@ -237,17 +237,20 @@ BEGIN
     PUSHBUTTON      "取消",IDCANCEL,289,193,50,14
 END
 
-IDD_HELP_ABOUT DIALOGEX 0, 0, 301, 108
+IDD_HELP_ABOUT DIALOGEX 0, 0, 301, 141
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "关于 Ladik's CASC 查看器"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "信息",IDC_STATIC,7,6,287,76
     ICON            IDI_MAIN_ICON,IDC_APP_ICON,13,21,20,20
-    LTEXT           "Ladik's CASC 查看器(网络版) v %u.%u.%u.%u (%u-bit %s build)\nCopyright (c) Ladislav Zezula 2013 - 2019",IDC_VERSION,49,20,239,17,SS_NOPREFIX
+    LTEXT           "Ladik's CASC 查看器(网络版) v %u.%u.%u.%u (%u-bit %s build)\nCopyright (c) Ladislav Zezula 2013 - 2024",IDC_VERSION,49,20,239,17,SS_NOPREFIX
     LTEXT           "内核: CascLib v %u.%02u",IDC_CASCLIB_VERSION,49,45,239,12
     CONTROL         "http://www.zezula.net/casc.html",IDC_URL,"Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,49,64,119,11
-    DEFPUSHBUTTON   "确定",IDOK,244,87,50,14,WS_GROUP
+    GROUPBOX        "感谢",IDC_STATIC,7,84,287,31
+    LTEXT           "中文翻译",IDC_STATIC,13,97,98,8
+    LTEXT           "jzy-chitong56",IDC_STATIC,115,97,171,8
+    DEFPUSHBUTTON   "确定",IDOK,244,120,50,14,WS_GROUP
 END
 
 IDD_WORKER_THREAD DIALOGEX 0, 0, 339, 62
@@ -931,7 +934,7 @@ END
 
 IDR_CONTEXT_MENU MENU
 BEGIN
-    POPUP "树视图"
+    POPUP "__TREE_VIEW__"
     BEGIN
         MENUITEM "展开/收起\tEnter",     ID_OPS_OPEN
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
@@ -939,7 +942,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "关闭储存\tCtrl+F4",      ID_FILE_CLOSE
     END
-    POPUP "列表视图"
+    POPUP "__LIST_VIEW__"
     BEGIN
         MENUITEM "打开\tEnter",                ID_OPS_OPEN
         MENUITEM "打开方式...\tShift+Enter", ID_OPS_OPEN_WITH
@@ -952,7 +955,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "属性...\tAlt+Enter",  ID_OPS_PROPERTIES
     END
-    POPUP "搜索文件"
+    POPUP "__SEARCH_FILES__"
     BEGIN
         MENUITEM "打开",                       ID_OPS_OPEN
         MENUITEM "打开方式...\tShift+Enter", ID_OPS_OPEN_WITH
@@ -964,7 +967,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "属性...\tAlt+Enter",  ID_OPS_PROPERTIES
     END
-    POPUP "安装视图"
+    POPUP "__INSTALL_VIEWER__"
     BEGIN
         MENUITEM "打开",                       ID_OPS_OPEN
         MENUITEM "打开方式...\tShift+Enter", ID_OPS_OPEN_WITH
@@ -973,7 +976,7 @@ BEGIN
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
         MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
     END
-    POPUP "表头"
+    POPUP "__LIST_HEADER__"
     BEGIN
         MENUITEM "恢复列表到默认视图",   ID_VIEW_RESET_COLUMNS
     END
@@ -1183,7 +1186,7 @@ BEGIN
     IDS_ENCODED_SIZE        "编码长度"
     IDS_LOCALE_FLAGS        "区域设置标志"
     IDS_CONTENT_FLAGS       "内容标志"
-    IDS_FILE_DATA_ID        "文件数据ID"
+    IDS_FILE_DATA_ID        "文件数据Id"
     IDS_SIZE64              "%s 字节"
     IDS_FILTERS_LISTFILES_CSV
                             "CSV 列表文件 (*.csv)|*.csv|所有文件 (*.*)|*.*||"
@@ -1315,7 +1318,7 @@ END
 STRINGTABLE
 BEGIN
     IDS_IMAGE_VIEW          "查看贴图"
-    IDS_FILTERS_DIRECTORIES "目录|*.目录||"
+    IDS_FILTERS_DIRECTORIES "目录|*.directory||"
     IDS_PMSG_FORMAT         "%s ..."
     IDS_PMSG_FORMAT_X_OF_Y  "%s (%u 于 %u) ..."
     IDS_PMSG_LOADING_FILE   "正在加载文件: %s"
@@ -1339,3 +1342,4 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
+
