@@ -973,7 +973,7 @@ BEGIN
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
         MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
     END
-    POPUP "__LIST_HEADER__"
+    POPUP "表头"
     BEGIN
         MENUITEM "恢复列表到默认视图",   ID_VIEW_RESET_COLUMNS
     END
@@ -1099,7 +1099,7 @@ BEGIN
     IDS_SIZE                "大小"
     IDS_GAME_NAME           "游戏"
     IDS_READY               "就绪"
-    IDS_FIRST_RUN           "首次运行 CascView.\n请确认设置."
+    IDS_FIRST_RUN           "首次运行 CascView. \n请确认设置."
     IDS_E_FILE_INCOMPLETE   "文件不完整"
     IDS_BROWSE_WORKING_DIRECTORY "选择工作目录"
     IDS_BROWSE_LISTFILE_DIRECTORY "选择列表文件目录"
@@ -1183,7 +1183,7 @@ BEGIN
     IDS_ENCODED_SIZE        "编码长度"
     IDS_LOCALE_FLAGS        "区域设置标志"
     IDS_CONTENT_FLAGS       "内容标志"
-    IDS_FILE_DATA_ID        "文件数据Id"
+    IDS_FILE_DATA_ID        "文件数据ID"
     IDS_SIZE64              "%s 字节"
     IDS_FILTERS_LISTFILES_CSV
                             "CSV 列表文件 (*.csv)|*.csv|所有文件 (*.*)|*.*||"
