@@ -247,8 +247,8 @@ BEGIN
     LTEXT           "Ladik's CASC 查看器(网络版) v %u.%u.%u.%u (%u-bit %s build)\nCopyright (c) Ladislav Zezula 2013 - 2024",IDC_VERSION,49,20,239,17,SS_NOPREFIX
     LTEXT           "内核: CascLib v %u.%02u",IDC_CASCLIB_VERSION,49,45,239,12
     CONTROL         "http://www.zezula.net/casc.html",IDC_URL,"Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,49,64,119,11
-    GROUPBOX        "感谢",IDC_STATIC,7,84,287,31
-    LTEXT           "中文翻译",IDC_STATIC,13,97,98,8
+    GROUPBOX        "致谢",IDC_STATIC,7,84,287,31
+    LTEXT           "汉化",IDC_STATIC,13,97,98,8
     LTEXT           "jzy-chitong56",IDC_STATIC,115,97,171,8
     DEFPUSHBUTTON   "确定",IDOK,244,120,50,14,WS_GROUP
 END
@@ -324,8 +324,8 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPT
 CAPTION "本地游戏储存"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    LTEXT           "选择要打开的储存",IDC_TITLE,8,8,252,9
-    CTEXT           "本地未找到任何储存",IDC_STATIC,7,19,428,105,SS_CENTERIMAGE | SS_SUNKEN
+    LTEXT           "选择游戏储存",IDC_TITLE,8,8,252,9
+    CTEXT           "本地未找到任何游戏储存",IDC_STATIC,7,19,428,105,SS_CENTERIMAGE | SS_SUNKEN
     CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,19,428,105
     DEFPUSHBUTTON   "确定",IDOK,331,132,50,14,WS_GROUP
     PUSHBUTTON      "取消",IDCANCEL,385,132,50,14
