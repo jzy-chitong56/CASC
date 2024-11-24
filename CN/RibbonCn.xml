@@ -9,7 +9,7 @@
         <Command Name="cmdFileMenu"/>
         <Command Name="cmdMRUList" Symbol="IDC_FILE_RECENT">
             <Command.LabelTitle>
-                <String>打开最近的文件</String>
+                <String>打开最近的文件夹</String>
             </Command.LabelTitle>
         </Command>
 
