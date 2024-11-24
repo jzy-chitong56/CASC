@@ -477,7 +477,7 @@ BEGIN
     GROUPBOX        "工作目录",-1,7,7,269,47
     EDITTEXT        IDC_WORKDIR,13,17,237,13,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_WORK,255,17,15,13
-    LTEXT           "该目录用于储存 Casc查看器 提取的文件.如果您输入了一个相对路径, 那么 'CascView.exe' 所在的目录将被作为根目录.",-1,13,33,258,16
+    LTEXT           "该目录用于储存 Casc查看器 提取的文件.如果您输入了一个相对路径, 那 'CascView.exe' 所在目录将被作为根目录.",-1,13,33,258,16
     GROUPBOX        "界面设置",-1,7,57,269,43
     CONTROL         "以B,KB,和MB为单位显示文件大小",IDC_FSIZE_HUMAN_READABLE,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,70,251,10
@@ -874,7 +874,7 @@ IDR_MAIN_MENU MENU
 BEGIN
     POPUP "文件"
     BEGIN
-        MENUITEM "打开本地储存...\tCtrl+O", ID_FILE_OPEN
+        MENUITEM "打开本地文件夹...\tCtrl+O", ID_FILE_OPEN
         MENUITEM "打开本地游戏储存...\tCtrl+Shift+O", ID_FILE_OPEN_GAME
         MENUITEM "打开网络储存...\tCtrl+Alt+O", ID_FILE_OPEN_ONLINE
         MENUITEM "关闭储存\tCtrl+F4",      ID_FILE_CLOSE
@@ -908,7 +908,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "查看\tF3",                   ID_OPS_VIEW
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
-        MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
+        MENUITEM "复制文件名及路径\tCtrl+C", ID_OPS_COPY_NAME
         MENUITEM SEPARATOR
         MENUITEM "标签过滤...\tCtrl+T",     ID_OPS_TAG_FILTER
         MENUITEM SEPARATOR
@@ -938,7 +938,7 @@ BEGIN
     BEGIN
         MENUITEM "展开/收起\tEnter",     ID_OPS_OPEN
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
-        MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
+        MENUITEM "复制文件名及路径\tCtrl+C", ID_OPS_COPY_NAME
         MENUITEM SEPARATOR
         MENUITEM "关闭储存\tCtrl+F4",      ID_FILE_CLOSE
     END
@@ -949,7 +949,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "查看\tF3",                   ID_OPS_VIEW
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
-        MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
+        MENUITEM "复制文件名及路径\tCtrl+C", ID_OPS_COPY_NAME
         MENUITEM SEPARATOR
         MENUITEM "标签过滤...\tCtrl+T",     ID_OPS_TAG_FILTER
         MENUITEM SEPARATOR
@@ -962,7 +962,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "视图\tF3",                   ID_OPS_VIEW
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
-        MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
+        MENUITEM "复制文件名及路径\tCtrl+C", ID_OPS_COPY_NAME
         MENUITEM "转到文件",                  IDC_GO_TO_FILE
         MENUITEM SEPARATOR
         MENUITEM "属性...\tAlt+Enter",  ID_OPS_PROPERTIES
@@ -974,7 +974,7 @@ BEGIN
         MENUITEM SEPARATOR
         MENUITEM "视图\tF3",                   ID_OPS_VIEW
         MENUITEM "提取...\tF5",            ID_OPS_EXTRACT
-        MENUITEM "复制文件名到剪贴板\tCtrl+C", ID_OPS_COPY_NAME
+        MENUITEM "复制文件名及路径\tCtrl+C", ID_OPS_COPY_NAME
     END
     POPUP "__LIST_HEADER__"
     BEGIN
@@ -1301,9 +1301,9 @@ BEGIN
                             "旧格式的储存参数使用冒号 (':') 隔开.\n否则请用星号 ('*') 隔开."
     IDS_LOADING_FILE        "加载文件..."
     IDS_E_STORAGE_PARAMS_WRONG
-                            "储存参数格式错误.\n请运行 CascView.exe 命令行选项查看语法."
+                            "储存参数格式错误.\n请在 CascView 帮助 查看 命令行选项 语法."
     IDS_E_OPEN_STORAGE_FILE_NOT_FOUND
-                            "%s 储存打开失败, 因为找不到必要文件.\n请检查 .build.info, .build.db 或 版本 的格式文件是否存在."
+                            "%s 储存打开失败, 找不到必要文件.\n请检查 .build.info, .build.db 或 版本 的格式文件是否存在."
     IDS_DONE                "完成."
     IDS_CANCELLED           "被用户取消."
     IDS_TITLE_ERROR         "错误"
