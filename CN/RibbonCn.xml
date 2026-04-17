@@ -125,7 +125,7 @@
                 <String>打开已安装储存</String>
             </Command.LabelTitle>
             <Command.LabelDescription>
-                <String>打开已安装的储存</String>
+                <String>打开已安装储存</String>
             </Command.LabelDescription>
             <Command.LargeImages>
                 <Image>ribbon/OpenGameL.bmp</Image>
