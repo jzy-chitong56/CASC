@@ -229,7 +229,7 @@ BEGIN
     GROUPBOX        "源列表文件",IDC_SOURCE_GROUP,7,7,332,143
     PUSHBUTTON      "添加列表文件...",IDC_ADD,12,129,97,14
     PUSHBUTTON      "删除",IDC_REMOVE,124,129,97,14
-    PUSHBUTTON      "删除所有",IDC_REMOVE_ALL,236,129,97,14
+    PUSHBUTTON      "全部删除",IDC_REMOVE_ALL,236,129,97,14
     GROUPBOX        "生成列表文件",IDC_STATIC,7,150,332,35
     EDITTEXT        IDC_TARGET_LISTFILE,12,165,300,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_LISTFILE_BROWSE,316,165,17,14
@@ -417,7 +417,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "是",IDYES,121,71,50,14
     PUSHBUTTON      "否",IDCANCEL,175,71,50,14
-    LTEXT           "目标磁盘上可用空间不足.\n\n可用: %s\n所需: %s %s\n\n是否继续?",IDC_FREE_SPACE,40,8,184,56
+    LTEXT           "目标磁盘可用空间不足.\n\n可用: %s\n所需: %s %s\n\n是否继续?",IDC_FREE_SPACE,40,8,184,56
     ICON            IDI_ICON_WARNING,IDC_STATIC,8,9,20,20
 END
 
@@ -477,7 +477,7 @@ BEGIN
     GROUPBOX        "工作目录",-1,7,7,269,47
     EDITTEXT        IDC_WORKDIR,13,17,237,13,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_WORK,255,17,15,13
-    LTEXT           "该目录用于储存 Casc查看器 提取的文件.如果您输入了一个相对路径, 那 'CascView.exe' 所在目录将被作为根目录.",-1,13,33,258,16
+    LTEXT           "该目录用于储存 Casc查看器 提取的文件.如果设置为相对路径, 那将使用 'CascView.exe' 所在目录作为根目录.",-1,13,33,258,16
     GROUPBOX        "界面设置",-1,7,57,269,43
     CONTROL         "以B,KB,和MB为单位显示文件大小",IDC_FSIZE_HUMAN_READABLE,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,70,251,10
@@ -504,8 +504,8 @@ BEGIN
     PUSHBUTTON      "...",IDC_BROWSE_CSV,256,30,15,14
     CONTROL         "下载魔兽世界社区列表文件 (CSV格式, github.com/wowdev)",IDC_DOWNLOAD_CSV,
                     "Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,12,49,259,13
-    GROUPBOX        "魔兽世界怀旧版",IDC_WOW_CLASSIC,7,76,269,61
-    LTEXT           "选择魔兽世界(怀旧版)列表文件 (TXT格式)",IDC_LABEL_TXT,13,89,257,9
+    GROUPBOX        "魔兽世界怀旧服",IDC_WOW_CLASSIC,7,76,269,61
+    LTEXT           "选择魔兽世界(怀旧服)列表文件 (TXT格式)",IDC_LABEL_TXT,13,89,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,100,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,257,100,15,14
     CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
@@ -514,11 +514,11 @@ END
 
 IDD_GET_LISTFILE_TXT DIALOGEX 0, 0, 283, 92
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
-CAPTION "魔兽世界(怀旧版)列表文件"
+CAPTION "魔兽世界(怀旧服)列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_CLASSIC,7,3,269,62
-    LTEXT           "选择魔兽世界(怀旧版)列表文件 (TXT格式)",IDC_LABEL_TXT,13,13,257,9
+    LTEXT           "选择魔兽世界(怀旧服)列表文件 (TXT格式)",IDC_LABEL_TXT,13,13,257,9
     EDITTEXT        IDC_LISTFILE_TXT,12,24,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BROWSE_TXT,256,24,15,14
     CONTROL         "下载魔兽世界社区列表文件 (TXT格式, github.com/wowdev)",IDC_DOWNLOAD_TXT,
@@ -577,7 +577,7 @@ CAPTION "导出到元存储"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "",IDC_WOW_RETAIL,7,3,269,110
-    LTEXT           "元存储可以包含多个游戏构建, 不同于自建版本或 .build 或 .info 文件. 元储存所有版本共用相同的文件,\n大量节省磁盘空间.",IDC_STATIC,13,13,257,26
+    LTEXT           "元存储可以包含多个游戏版本, 不同于自建版本或 .build 或 .info 文件. 元储存所有版本共用文件,\n大量节省磁盘空间.",IDC_STATIC,13,13,257,26
     LTEXT           "目标文件夹:",IDC_STATIC,12,47,258,8
     EDITTEXT        IDC_TARGET_FOLDER,12,57,240,14,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_TARGET_FOLDER_BROWSE,256,57,15,14
@@ -875,7 +875,7 @@ BEGIN
     POPUP "文件"
     BEGIN
         MENUITEM "打开本地文件夹...\tCtrl+O", ID_FILE_OPEN
-        MENUITEM "打开本地游戏储存...\tCtrl+Shift+O", ID_FILE_OPEN_GAME
+        MENUITEM "打开本地储存...\tCtrl+Shift+O", ID_FILE_OPEN_GAME
         MENUITEM "打开网络储存...\tCtrl+Alt+O", ID_FILE_OPEN_ONLINE
         MENUITEM "关闭储存\tCtrl+F4",      ID_FILE_CLOSE
         MENUITEM SEPARATOR
@@ -1192,7 +1192,7 @@ BEGIN
                             "CSV 列表文件 (*.csv)|*.csv|所有文件 (*.*)|*.*||"
     IDS_FILTERS_LISTFILES_TXT
                             "Text 列表文件 (*.txt)|*.txt|所有文件 (*.*)|*.*||"
-    IDS_IMAGE_BLP           "BLP: 暴雪魔兽系列纹理文件"
+    IDS_IMAGE_BLP           "BLP: 暴雪魔兽系列贴图文件"
     IDS_IMAGE_PCX           "PCX: ZSoft PiCture eXchange image"
     IDS_IMAGE_TGA           "TGA: Truevision graphics adapter image"
     IDS_IMAGE_DDS           "DDS: Direct Draw Surface Image"
@@ -1215,7 +1215,7 @@ BEGIN
     IDS_BROWSE_CACHE_DIRECTORY "选择缓存目录"
     IDS_FOLDER_NAME         "文件夹名称:"
     IDS_E_OPEN_CANCELLED    "已取消打开储存."
-    IDS_OPENING_STORAGE     "正在打本本地储存..."
+    IDS_OPENING_STORAGE     "正在打开本地储存..."
     IDS_E_GET_PROPERTIES    "%s 属性加载失败."
     IDS_LOADING_FILES       "正在加载储存文件..."
 END
@@ -1225,8 +1225,8 @@ BEGIN
     IDS_NO_RECENT_ITEMS     "<最近未打开项目>"
     IDS_CHOOSE_LISTFILE     "选择列表文件"
     IDS_E_NO_ITEMS_SELECTED "未选择任何项目.\n请重新选择(支持多选)."
-    IDS_EXTRACTING_FILES    "正在提取储存的文件..."
-    IDS_BROWSE_TARGET_DIRECTORY "选择要提取的目标目录"
+    IDS_EXTRACTING_FILES    "正在提取储存文件..."
+    IDS_BROWSE_TARGET_DIRECTORY "选择提取目录"
     IDS_FILE_MASK           "文件名:"
     IDS_E_EXTRACT_FILE      "%s 文件提取失败."
     IDS_FILE_OF_FILES       "正在检查 %u 到 %u ..."
@@ -1279,7 +1279,7 @@ BEGIN
     IDS_IMAGE_SAVED         "%s 保存成功."
     IDS_PREPARING           "正在准备..."
     IDS_E_OPEN_FILE         "%s 文件打开失败"
-    IDS_WANT_EXTRACT_ANYWAY "已取消清除目标目录.\n是否继续提取文件?"
+    IDS_WANT_EXTRACT_ANYWAY "已取消清除提取目录.\n是否继续提取文件?"
     IDS_CLOSE               "关闭"
     IDS_N_ITEMS_SELECTED    "%u 已选择"
     IDS_CANCELLING          "正在取消..."
