@@ -7,7 +7,9 @@
 //
 // Generated from the TEXTINCLUDE 2 resource.
 //
-#include "afxres.h"
+
+// Afxres.h replacement for non-MFC projects
+#include "winres.h"
 
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
@@ -106,6 +108,12 @@ IDI_ICON_WARNING        ICON                    "res\\IconWarning.ico"
 IDI_FILE_VIEWER         ICON                    "res\\IconFileViewer.ico"
 
 IDI_GAME_DIABLO_IMM     ICON                    "res\\IconGameDiabloImmortal.ico"
+
+IDI_GAME_WAR_RUMBLE     ICON                    "res\\IconGameWarRumble.ico"
+
+IDI_GAME_WARCRAFT       ICON                    "res\\IconGameWarcraft.ico"
+
+IDI_GAME_WARCRAFT2      ICON                    "res\\IconGameWarcraft2.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -244,7 +252,7 @@ FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     GROUPBOX        "信息",IDC_STATIC,7,6,287,76
     ICON            IDI_MAIN_ICON,IDC_APP_ICON,13,21,20,20
-    LTEXT           "Ladik's CASC 查看器(网络版) v %u.%u.%u.%u (%u-bit %s build)\nCopyright (c) Ladislav Zezula 2013 - 2024",IDC_VERSION,49,20,239,17,SS_NOPREFIX
+    LTEXT           "Ladik's CASC 查看器(网络版) v %u.%u.%u.%u (%u-bit %s build)\nCopyright (c) Ladislav Zezula 2013 - 2026",IDC_VERSION,49,20,239,17,SS_NOPREFIX
     LTEXT           "内核: CascLib v %u.%02u",IDC_CASCLIB_VERSION,49,45,239,12
     CONTROL         "http://www.zezula.net/casc.html",IDC_URL,"Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,49,64,119,11
     GROUPBOX        "致谢",IDC_STATIC,7,84,287,31
@@ -483,17 +491,20 @@ BEGIN
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,70,251,10
     CONTROL         "工具栏显示小图标",IDC_SMALL_TOOLBAR_BUTTONS,
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,84,251,10
-    GROUPBOX        "提取设置",-1,7,106,269,43
+    GROUPBOX        " 储存设置 ",-1,7,103,269,27
+    CONTROL         "允许下载缺失的元存储数据（如编码）",IDC_ALLOW_DOWNLOAD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,114,251,10
+    GROUPBOX        "提取设置",-1,7,133,269,43
     CONTROL         "文件重名时自动覆盖,不再询问",IDC_AUTO_OVERWRITE,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,119,251,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,146,251,10
     CONTROL         "提取文件时显示选项对话框(s)",IDC_SHOW_EXTRACT_OPTIONS,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,132,251,10
-    GROUPBOX        "本地化",-1,7,153,269,51
-    LTEXT           "列表只显示与选择区域相同的文件.\n仅适用于使用了区域设置的存储,如魔兽世界.",-1,12,164,259,17
-    PUSHBUTTON      "(默认区域)",IDC_LOCALE_LIST,12,184,259,13,BS_CENTER
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,159,251,10
+    GROUPBOX        "本地化",-1,7,179,269,51
+    LTEXT           "列表只显示与选择区域相同的文件.\n仅适用于使用了区域设置的存储,如魔兽世界.",-1,12,190,259,17
+    PUSHBUTTON      "(默认区域)",IDC_LOCALE_LIST,12,210,259,13,BS_CENTER
 END
 
-IDD_OPTIONS2 DIALOGEX 0, 0, 283, 211
+IDD_OPTIONS2 DIALOGEX 0, 0, 283, 237
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "列表文件"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
@@ -831,8 +842,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,4,0,305
- PRODUCTVERSION 2,4,0,305
+ FILEVERSION 2,4,0,320
+ PRODUCTVERSION 2,4,0,320
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -849,13 +860,13 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Ladislav Zezula"
             VALUE "FileDescription", "Ladik's CASC 储存查看器"
-            VALUE "FileVersion", "2, 4, 0, 305"
+            VALUE "FileVersion", "2, 4, 0, 320\0"
             VALUE "InternalName", "CascView.exe"
-            VALUE "LegalCopyright", "Copyright (c) 2013 - 2023 Ladislav Zezula"
+            VALUE "LegalCopyright", "Copyright (c) 2013 - 2026 Ladislav Zezula"
             VALUE "LegalTrademarks", "http://www.zezula.net"
             VALUE "OriginalFilename", "CascView.exe"
             VALUE "ProductName", "CascView"
-            VALUE "ProductVersion", "2, 4, 0, 305"
+            VALUE "ProductVersion", "2, 4, 0, 320\0"
         END
     END
     BLOCK "VarFileInfo"
